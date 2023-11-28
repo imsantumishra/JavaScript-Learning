@@ -1,0 +1,39 @@
+.calculator{
+
+    width: 250px;
+    border: 1px solid #505050;
+    padding: 10px;
+    border-radius: 5px;
+}
+.input-area{
+    width: 90%;
+    padding: 10px;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: navajowhite;
+    color: 000;
+    
+}
+.input-area::placeholder{
+    color: #000;
+}
+.button-field{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    
+}
+
+.button{
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}

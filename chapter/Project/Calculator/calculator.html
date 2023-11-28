@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="input-area" readonly placeholder="0">
+        <div class="button-field">
+            <button class="button" onclick="inputArea = inputArea + '7';
+            document.querySelector('.input-area').value = inputArea;
+            ">7</button>
+            <button class="button" onclick="inputArea = inputArea + '8';
+            document.querySelector('.input-area').value = inputArea;
+            ">8</button>
+
+            <button class="button" onclick="inputArea = inputArea + '/';
+            document.querySelector('.input-area').value = inputArea;
+            ">/</button>
+
+
+            <button class="button" onclick="inputArea = inputArea + '9';
+            document.querySelector('.input-area').value = inputArea;
+            ">9</button>
+
+
+                       <button class="button" onclick="inputArea = inputArea + '4';
+            document.querySelector('.input-area').value = inputArea;
+            ">4</button>
+
+<button class="button" onclick="inputArea = inputArea + '*';
+document.querySelector('.input-area').value = inputArea;
+">*</button>
+            <button class="button" onclick="inputArea = inputArea + '5';
+            document.querySelector('.input-area').value = inputArea;
+            ">5</button>
+            <button class="button" onclick="inputArea = inputArea + '6';
+            document.querySelector('.input-area').value = inputArea;
+            ">6</button>
+            <button class="button" onclick="inputArea = inputArea + '-';
+            document.querySelector('.input-area').value = inputArea;
+            ">-</button>
+
+            <button class="button" onclick="inputArea = inputArea + '1';
+            document.querySelector('.input-area').value = inputArea;
+            ">1</button>
+            <button class="button" onclick="inputArea = inputArea + '2';
+            document.querySelector('.input-area').value = inputArea;
+            ">2</button>
+             <button class="button" onclick="inputArea = inputArea + '+';
+             document.querySelector('.input-area').value = inputArea;
+             ">+</button>
+             
+            <button class="button" onclick="inputArea = inputArea + '3';
+            document.querySelector('.input-area').value = inputArea;
+            ">3</button>
+            
+
+           
+            <button class="button" onclick="inputArea = inputArea + '0';
+            document.querySelector('.input-area').value = inputArea;
+            ">0</button>
+            <button class="button" onclick="inputArea = inputArea + '.';
+            document.querySelector('.input-area').value = inputArea;
+            ">.</button>
+            <button class="button" onclick="inputArea = '';
+            document.querySelector('.input-area').value = inputArea;
+            ">C</button>
+            <button class="button">AC</button>
+            <button class="button" onclick="inputArea = eval(inputArea);
+            document.querySelector('.input-area').value = inputArea;
+            ">=</button>
+        </div>
+
+    </div>
+
+    <script>
+        let inputArea = '';
+        document.querySelector('.input-area').value = inputArea;
+
+    </script>
+</body>
+</html>

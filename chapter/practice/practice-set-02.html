@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practice Set Exericse 02</title>
+  </head>
+  <body>
+    <button id="click-me" onclick="myName = myName + 'Yuvaan';
+    document.querySelector('#my-name').innerHTML = myName;
+    ">Click To Know My Name!</button>
+    <h1 id="my-name"></h1>
+    <script>
+      let myName = '';
+      document.querySelector('#my-name').value = myName;
+
+      let jeansPrice = 15599 - (10 / 100) * 15599 - 272;
+      let bagPrice = 2499 - (41 / 100) * 2499 - 29;
+      const gstPercentage = 18;
+      let itemPrice = Math.round(((jeansPrice + bagPrice + (20 + 25)) * (100 + gstPercentage)) / 100);
+      let finalBill = `Your Final Bill Amount is: ${itemPrice}`;
+      console.log(finalBill);
+    //   alert(finalBill);
+      
+        
+
+        console.log(eval( '15+5+20+20'));
+
+    </script>
+  </body>
+</html>
