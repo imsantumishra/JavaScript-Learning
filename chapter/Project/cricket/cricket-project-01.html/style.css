@@ -18,7 +18,7 @@ html, body{
    justify-content: center;
    align-items: center;
    margin-top: 27px;
-   /* border-radius: px; */
+   border-radius: 50px;
 }
 .score-board h1{
     font-size: 25px;
@@ -117,4 +117,8 @@ h1{
     box-shadow: 4px 4px 4px #D68910;
     cursor: pointer;
     
+}
+.acton-btn:hover{
+    background-color: rgb(0, 183, 255);
+    color: white;
 }
