@@ -40,11 +40,18 @@ function getResult(userMove, computerMove){
 
 }
 
+function showResult (userMove, computerMove, result){
+     document.querySelector('#my-choice').innerText = userMove;
+     document.querySelector('#comp-choice').innerText = computerMove;
+     document.querySelector('#all-result').innerText = result;
+}
+
 
 
 function batButton() {
      let computerChoice = computerRandomcode();
      let resultMsg = getResult('Bat', computerChoice);
+     showResult('Bat', computerChoice, resultMsg);
 
      // if (computerChoice === 'Bat') {
      //      resultMsg = `It's is a Tie`;
@@ -53,15 +60,16 @@ function batButton() {
      // } else if (computerChoice === 'Stump') {
      //      resultMsg = 'Computer has Win';
      // }
-     document.querySelector('#my-choice').innerText = 'Bat';
-     document.querySelector('#comp-choice').innerText = computerChoice;
-     document.querySelector('#all-result').innerText = resultMsg;
+     // document.querySelector('#my-choice').innerText = 'Bat';
+     // document.querySelector('#comp-choice').innerText = computerChoice;
+     // document.querySelector('#all-result').innerText = resultMsg;
 };
 
 
 function ballButton() {
      computerChoice = computerRandomcode();
-     let resultMsg = getResult('Ball', computerChoice);
+     let resultMsg = getResult('Ball', computerChoice);     
+     showResult('Ball', computerChoice, resultMsg);
 
      // if (computerChoice === 'Bat') {
      //      resultMsg = 'Computer has Win';
@@ -70,15 +78,16 @@ function ballButton() {
      // } else if (computerChoice === 'Stump') {
      //      resultMsg = 'You have Win';
      // }
-     document.querySelector('#my-choice').innerText = 'Ball';
-     document.querySelector('#comp-choice').innerText = computerChoice;
-     document.querySelector('#all-result').innerText = resultMsg;
+     // document.querySelector('#my-choice').innerText = 'Ball';
+     // document.querySelector('#comp-choice').innerText = computerChoice;
+     // document.querySelector('#all-result').innerText = resultMsg;
 };
 
 
 function stumpButton() {
      computerChoice = computerRandomcode();
-     let resultMsg = getResult('Stump', computerChoice);
+     let resultMsg = getResult('Stump', computerChoice);     
+     showResult('Stump', computerChoice, resultMsg);
 
      // if (computerChoice === 'Bat') {
      //      resultMsg = 'You have Win';
@@ -87,7 +96,7 @@ function stumpButton() {
      // } else if (computerChoice === 'Stump') {
      //      resultMsg = `It's is a Tie`;
      // }
-     document.querySelector('#my-choice').innerText = 'Stump';
-     document.querySelector('#comp-choice').innerText = computerChoice;
-     document.querySelector('#all-result').innerText = resultMsg;
+     // document.querySelector('#my-choice').innerText = 'Stump';
+     // document.querySelector('#comp-choice').innerText = computerChoice;
+     // document.querySelector('#all-result').innerText = resultMsg;
 };
