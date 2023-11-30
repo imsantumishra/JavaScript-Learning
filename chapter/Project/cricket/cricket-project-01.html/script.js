@@ -1,67 +1,93 @@
 
-let computerChoice;
+
 function computerRandomcode() {
      let randomNumber = Math.random() * 3;
      if (randomNumber <= 1) {
-          computerChoice = 'Bat';
+         return 'Bat';
      } else if (randomNumber <= 2) {
-          computerChoice = 'Ball';
+          return 'Ball';
      } else {
-          computerChoice = 'Stump';
+          return 'Stump';
      }
 }
 
-function batButton() {
-     computerRandomcode();
-
-     let resultMsg = '';
-
-     if (computerChoice === 'Bat') {
-          resultMsg = `It's is a Tie`;
-     } else if (computerChoice === 'Ball') {
-          resultMsg = 'You have Win';
-     } else if (computerChoice === 'Stump') {
-          resultMsg = 'Computer has Win';
+function getResult(userMove, computerMove){
+     if (userMove === 'Bat'){
+          if (computerMove === 'Bat') {
+               return `It's is a Tie`;
+          } else if (computerMove === 'Ball') {
+               return 'You have Win';
+          } else if (computerMove === 'Stump') {
+               return 'Computer has Win';
+          }
+     } else if (userMove === 'Ball'){
+          if (computerMove === 'Bat') {
+               return 'Computer has Win';
+          } else if (computerMove === 'Ball') {
+               return `It's is a Tie`;
+          } else if (computerMove === 'Stump') {
+               return 'You have Win';
+          }
+     } else{
+          if (computerMove === 'Bat') {
+               return 'You have Win';
+          } else if (computerMove === 'Ball') {
+               return 'Computer has Win';
+          } else if (computerMove === 'Stump') {
+               return `It's is a Tie`;
+          }
      }
+
+}
+
+
+
+function batButton() {
+     let computerChoice = computerRandomcode();
+     let resultMsg = getResult('Bat', computerChoice);
+
+     // if (computerChoice === 'Bat') {
+     //      resultMsg = `It's is a Tie`;
+     // } else if (computerChoice === 'Ball') {
+     //      resultMsg = 'You have Win';
+     // } else if (computerChoice === 'Stump') {
+     //      resultMsg = 'Computer has Win';
+     // }
      document.querySelector('#my-choice').innerText = 'Bat';
      document.querySelector('#comp-choice').innerText = computerChoice;
      document.querySelector('#all-result').innerText = resultMsg;
 };
-batButton();
 
 
 function ballButton() {
-     computerRandomcode();
-     let resultMsg = '';
+     computerChoice = computerRandomcode();
+     let resultMsg = getResult('Ball', computerChoice);
 
-     if (computerChoice === 'Bat') {
-          resultMsg = 'Computer has Win';
-     } else if (computerChoice === 'Ball') {
-          resultMsg = `It's is a Tie`;
-     } else if (computerChoice === 'Stump') {
-          resultMsg = 'You have Win';
-     }
+     // if (computerChoice === 'Bat') {
+     //      resultMsg = 'Computer has Win';
+     // } else if (computerChoice === 'Ball') {
+     //      resultMsg = `It's is a Tie`;
+     // } else if (computerChoice === 'Stump') {
+     //      resultMsg = 'You have Win';
+     // }
      document.querySelector('#my-choice').innerText = 'Ball';
      document.querySelector('#comp-choice').innerText = computerChoice;
      document.querySelector('#all-result').innerText = resultMsg;
 };
-ballButton();
 
 
 function stumpButton() {
-     computerRandomcode();
+     computerChoice = computerRandomcode();
+     let resultMsg = getResult('Stump', computerChoice);
 
-     let resultMsg = '';
-
-     if (computerChoice === 'Bat') {
-          resultMsg = 'You have Win';
-     } else if (computerChoice === 'Ball') {
-          resultMsg = 'Computer has Win';
-     } else if (computerChoice === 'Stump') {
-          resultMsg = `It's is a Tie`;
-     }
+     // if (computerChoice === 'Bat') {
+     //      resultMsg = 'You have Win';
+     // } else if (computerChoice === 'Ball') {
+     //      resultMsg = 'Computer has Win';
+     // } else if (computerChoice === 'Stump') {
+     //      resultMsg = `It's is a Tie`;
+     // }
      document.querySelector('#my-choice').innerText = 'Stump';
      document.querySelector('#comp-choice').innerText = computerChoice;
      document.querySelector('#all-result').innerText = resultMsg;
 };
-stumpButton();

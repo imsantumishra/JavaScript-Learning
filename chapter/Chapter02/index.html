@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Age</title>
+
+</head>
+<body>
+    
+    <script>
+        // function determineAge(){
+        //     let age = 30;
+            
+        //     // if (age === undefined){
+        //     //     return 'you ';
+        //     // }
+        //     // console.log('Checking Your User Age')
+        //     let status;
+        //     if (age < 21){
+        //         status =  `You're are not Eligible for vote`;
+        //     } else{
+        //         status = `Yes! you're Eligible for vote`;
+        //     }
+        //     return status;
+        // }
+        // console.log(determineAge());
+
+
+        function voteEligible(){
+            let age = 21;
+            if (age === undefined){
+                return `You're not a Human`
+            }
+            console.log('Checking Your age')
+           
+
+            if (age > 18){
+               return 'You are Eligible for vote'
+            } else{
+                return 'Sorry! You are not eligible for vote'
+            }
+           
+        }
+
+        console.log(voteEligible());  
+    </script>
+</body>
+</html>
