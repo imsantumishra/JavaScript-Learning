@@ -8,7 +8,41 @@
 <body>
     
     <script>
-        le
+        //Find the even and odd numbers
+        function oddNumber (num) {
+            let rem = num % 2; // 0
+            let oddis = rem == 1; // 0 == 1
+            return oddis;           
+        }
+
+        // console.log(oddNumber(3));
+        // console.log(oddNumber(8));
+        // console.log(oddNumber(67));
+        // console.log(oddNumber(999));
+
+        //display the number of big numbers
+        function bigNumber (num1, num2) {
+            // if (num1 > num2) {
+            //     return num1;
+            // } else {
+            //     return num2;
+            // }
+            return num1 > num2 ? num1 : num2;
+        }
+        // console.log(bigNumber(4,6));
+        // console.log(bigNumber(8,6));
+        // console.log(bigNumber(9.3,57));
+        // console.log(bigNumber(4,5));
+
+       // convert to celsius to Fahrenheit 
+       function convertCel (celsius) {
+            let temp = (celsius * 9/5) + 32;
+            return temp;
+       }
+         console.log(convertCel(32));
+         console.log(convertCel(30));
+         alertz(`Today temperature is ${convertCel(40)}°F`);
+    
 
     </script>
 </body>
