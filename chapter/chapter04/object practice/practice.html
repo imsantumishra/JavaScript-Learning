@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Practice</title>
+</head>
+<body>
+    
+
+    <script>
+        // Create Myntra product
+        let product = {
+            brand: 'Nike',
+            Name: 'Nike Air',
+            title: 'this is design for perfacet men',
+            price: '$450',
+            size: '9',
+            'delivery-time': 'Same day delivery',
+        };
+        // console.log(product);
+
+        // let myntraProductcopy = myntraProduct
+        //     console.log(myntraProductcopy);
+        //     myntraProductcopy.price = '$650';
+        //     console.log(myntraProductcopy);
+        //     myntraProductcopy.size = '6UK';
+        //     console.log(myntraProductcopy);
+        //     myntraProductcopy.title = 'great women';
+        //     console.log(myntraProductcopy);
+
+        // console.log(product['delivery-time']);
+
+        let msg = {
+            message: 'Good Jobs',
+            status: 'Completed',
+        }
+        console.log(msg);       
+
+        let {message, status} = msg;
+        console.log(message);
+        console.log(status);
+
+
+        function isIdenticalProduct(product1, product2) {
+            if (typeof product1 !== 'object' || typeof product2 !== 'object') {
+                console.warn('Parameter passed not was an object');
+                return false;
+            };
+
+            if (product1 == product2) {
+                return true;
+            };
+
+            if  (product1.Name === product2.Name && 
+                product1.size === product2.size &&
+                product1.title === product2.title) {
+                return true;
+            }else {
+                return false;
+            };
+        };
+
+       
+     let product2 = {
+            brand: 'Nike',
+            Name: 'Nike Air',
+            title: 'this is design for perfacet men',
+            price: '$450',
+            size: '6',
+            'delivery-time': 'Same day delivery',
+        };
+
+        let product3 = {
+            brand: 'Nike',
+            Name: 'Nike Air',
+            title: 'great women',
+            price: '$450',
+            size: '6',
+            'delivery-time': 'Same day delivery',
+        };
+
+        console.log(isIdenticalProduct(product, ''));
+        console.log(isIdenticalProduct(product, product));
+        console.log(isIdenticalProduct(product, product2));
+        console.log(isIdenticalProduct(product3, product2));
+
+
+    </script>
+</body>
+</html>

@@ -2,6 +2,8 @@ let score = {
      Win: 0,
      Lost: 0,
      Tie: 0,
+    
+
 };
 
 
@@ -13,8 +15,8 @@ function computerRandomcode() {
           return 'Ball';
      } else {
           return 'Stump';
-     }
-}
+     };
+};
 
 function getResult(userMove, computerMove){
      if (userMove === 'Bat'){
@@ -49,10 +51,10 @@ function getResult(userMove, computerMove){
           } else if (computerMove === 'Stump') {
                score.Tie++;
                return `It's is a Tie`;
-          }
-     }
+          };
+     };
 
-}
+};
 
 function showResult (userMove, computerMove, result){
      document.querySelector('#my-choice').innerText =
